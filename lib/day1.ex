@@ -11,8 +11,7 @@
 
 defmodule Aoc25 do
   def day1 do
-    contents = File.read!("inputs/day1.txt")
-    parse(contents)
+    File.read!("inputs/day1.txt") |> parse()
   end
 
   def parse(input) do
