@@ -1,7 +1,13 @@
+# part 1
 # make 2 lists out of the number columns (can check for is equal)
 # sort the lists to be smallest to largest
 # pair the numbers and work out the difference 
 # sum the differences
+
+# part 2
+# count how often numbers from collA appear in collB
+# multiply the left number by how many times it appears in collB (similarity score)
+# add up the numbers
 
 defmodule Aoc25 do
   def day1 do
@@ -39,6 +45,14 @@ defmodule Aoc25 do
       |> Enum.map(&String.to_integer/1)
       |> Enum.sort()
 
+    # calculate similarity scores
+    score =
+      Enum.map(collA, fn x ->
+        counts = Enum.filter(collB, fn y -> x == y end) |> length
+        x * counts
+      end)
+      |> Enum.sum()
+
     # join the columns and then calc their distances
     distances =
       Enum.zip(collA, collB)
@@ -46,5 +60,6 @@ defmodule Aoc25 do
 
     sum = Enum.sum(distances)
     IO.inspect(sum)
+    IO.inspect(score)
   end
 end
