@@ -39,17 +39,10 @@ defmodule Aoc25 do
       |> Enum.map(&String.to_integer/1)
       |> Enum.sort()
 
-
     # join the columns and then calc their distances
     distances =
       Enum.zip(collA, collB)
-      |> Enum.map(fn {a, b} ->
-        if a > b do
-          a - b
-        end
-
-        b - a
-      end)
+      |> Enum.map(fn {a, b} -> abs(a - b) end)
 
     sum = Enum.sum(distances)
     IO.inspect(sum)
