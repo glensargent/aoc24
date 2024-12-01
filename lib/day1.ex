@@ -48,8 +48,7 @@ defmodule Aoc25 do
     # calculate similarity scores
     score =
       Enum.map(collA, fn x ->
-        counts = Enum.filter(collB, fn y -> x == y end) |> length
-        x * counts
+        x * Enum.count(collB, &(&1 == x))
       end)
       |> Enum.sum()
 
@@ -59,7 +58,7 @@ defmodule Aoc25 do
       |> Enum.map(fn {a, b} -> abs(a - b) end)
 
     sum = Enum.sum(distances)
-    IO.inspect(sum)
-    IO.inspect(score)
+    IO.inspect(sum, label: "Sum of distances")
+    IO.inspect(score, label: "Total simularity score")
   end
 end
