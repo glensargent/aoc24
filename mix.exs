@@ -1,9 +1,9 @@
-defmodule Aoc25.MixProject do
+defmodule Aoc24.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :aoc25,
+      app: :aoc24,
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
@@ -29,8 +29,8 @@ defmodule Aoc25.MixProject do
 
   defp aliases do
     [
-      day1: ["run -e 'Aoc25.Day1.run()'"],
-      day2: ["run -e 'Aoc25.Day2.run()'"],
+      day1: ["run -e 'Aoc24.Day1.run()'"],
+      day2: ["run -e 'Aoc24.Day2.run()'"],
     ]
   end
 end

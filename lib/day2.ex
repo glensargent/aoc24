@@ -1,4 +1,4 @@
-defmodule Aoc25.Day2 do
+defmodule Aoc24.Day2 do
   def run do
     File.read!("inputs/day2.txt") |> parse()
   end
