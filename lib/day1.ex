@@ -9,8 +9,8 @@
 # multiply the left number by how many times it appears in collB (similarity score)
 # add up the numbers
 
-defmodule Aoc25 do
-  def day1 do
+defmodule Aoc25.Day1 do
+  def run do
     File.read!("inputs/day1.txt") |> parse()
   end
 

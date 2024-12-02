@@ -29,7 +29,8 @@ defmodule Aoc25.MixProject do
 
   defp aliases do
     [
-      day1: ["run -e 'Aoc25.day1()'"],
+      day1: ["run -e 'Aoc25.Day1.run()'"],
+      day2: ["run -e 'Aoc25.Day2.run()'"],
     ]
   end
 end
