@@ -22,8 +22,7 @@ defmodule Aoc24.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:nimble_parsec, "~> 1.4"}
     ]
   end
 
@@ -31,7 +30,7 @@ defmodule Aoc24.MixProject do
     [
       day1: ["run -e 'Aoc24.Day1.run()'"],
       day2: ["run -e 'Aoc24.Day2.run()'"],
-      day2: ["run -e 'Aoc24.Day3.run()'"],
+      day3: ["run -e 'Aoc24.Day3.run()'"]
     ]
   end
 end
