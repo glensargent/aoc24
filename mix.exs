@@ -31,6 +31,7 @@ defmodule Aoc24.MixProject do
     [
       day1: ["run -e 'Aoc24.Day1.run()'"],
       day2: ["run -e 'Aoc24.Day2.run()'"],
+      day2: ["run -e 'Aoc24.Day3.run()'"],
     ]
   end
 end
